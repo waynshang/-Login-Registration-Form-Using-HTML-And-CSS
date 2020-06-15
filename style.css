@@ -102,10 +102,13 @@
 }
 
 .check-box{
-  margin: 30px 10px 30px 0;
+  margin: 10px 5px 30px 0;
+}
+
+.check-box-password{
+  margin: 5px 5px 0 0
 }
 span{
-  
   color: #777;
   font-size: 12px;
   bottom: 68px;
