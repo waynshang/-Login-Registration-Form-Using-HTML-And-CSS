@@ -31,6 +31,7 @@
   padding: 5px;
   box-shadow: 0 0 20px 9px #ff61241f;
   border-radius: 30px;
+  
 
 }
 
@@ -38,10 +39,12 @@
   cursor: pointer;
   position: relative;
   background: transparent;
+  width: 105px;
   padding: 10px 30px;
   border-radius: 30px;
   outline: none;
   border: 0;
+  
 }
 
 #btn{
