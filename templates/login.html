@@ -17,7 +17,7 @@
           <img src="/static/login-reg-img/tw.png">
           <img src="/static/login-reg-img/gp.png">
         </div>
-        <form id='login' class = "input-group" action="/">
+        <form id='login' class = "input-group" action="/login", method="POST">
           <input type ='text' class='input-field' name = "user_id" placeholder="User Id" required>
           <input type ='password' class='input-field' name = "user_password" placeholder="Enter Password" id="login_password" required>
           <input type ="checkbox" onclick="showpassword(this)" id ="login_showpassword" class="check-box-password"><span>Show Password</span><br/>
