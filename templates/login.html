@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Login And Registration Form</title>
+    <link rel ='stylesheet' href='/static/style.css'>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+
+        <div class="social-icon">
+          <img src="/static/login-reg-img/fb.png">
+          <img src="/static/login-reg-img/tw.png">
+          <img src="/static/login-reg-img/gp.png">
+        </div>
+        <form id='login' class = "input-group" action="/">
+          <input type ='text' class='input-field' name = "user_id" placeholder="User Id" required>
+          <input type ='password' class='input-field' name = "user_password" placeholder="Enter Password" id="login_password" required>
+          <input type ="checkbox" onclick="showpassword(this)" id ="login_showpassword" class="check-box-password"><span>Show Password</span><br/>
+          <input type ='checkbox' class='check-box'><span>Rember Password</span>
+          <button type ='submit' class='submit-btn' >Log in</button><!--if need submit a form use type= submit-->
+          
+        </form>
+
+        <form id = 'register' class = "input-group" action="/register" method="POST">
+          <input type ='text' class='input-field' name = "user_id" placeholder="User Id" required>
+          <input type ='text' class='input-field' name = "user_email" placeholder="Email" required>
+          <input type ='password' class='input-field' name = "user_password" placeholder="Enter Password" id="register_password" reuired>
+          <input type ="checkbox" onclick="showpassword(this)" id ="register_showpassword"  class="check-box-password"><span>Show Password</span><br/>
+          <input type ='checkbox' class='check-box'><span>I agree to the terms & condition</span><br/>
+          <button type ='submit' class='submit-btn'> Register</button>
+          
+        </form>
+      </div>
+
+      
+    </div>
+    <script>
+      let x = document.getElementById("login")
+      let y = document.getElementById("register")
+      let z = document.getElementById("btn")
+      function register(){
+        x.style.left = '-500px' 
+        y.style.left = '100px'
+        z.style.left = '120px'
+      }
+      function login(){
+        x.style.left = '100px' 
+        y.style.left = '500px'
+        z.style.left = '0'
+      }
+
+      function showpassword(e) {
+        console.log(e)
+        let x = null
+        switch(e.id){
+          case "login_showpassword":
+            x = document.getElementById("login_password");
+            break;
+          case "register_showpassword":
+            x = document.getElementById("register_password");
+            break;
+        }
+        if (x)  x.type === "password" ? x.type = "text" :  x.type = "password";
+
+      }
+
+    </script>
+
+  </body>
+</html>
