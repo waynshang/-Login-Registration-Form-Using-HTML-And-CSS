@@ -1,1 +1,34 @@
-hello {{ name }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Duration Keeper</title>
+    <link rel="stylesheet" type="text/css" href="/static/index_style.css">
+  </head>
+  <body>
+    <section>
+      <img src="/static/index_img/bg.jpg" id = "bg">
+      <img src= "/static/index_img/moon.png" id ="moon">
+      <img src= "/static/index_img/mountain.png" id ="mountain">
+      <img src= "/static/index_img/road.png" id ="road"> 
+      <h2 id="text">moon light</h2>
+    </section>
+    <script type="text/javascript">
+      let bg = document.getElementById("bg");
+      let moon = document.getElementById("moon");
+      let mountain = document.getElementById("mountain");
+      let road = document.getElementById("road");
+      let text = document.getElementById("text");
+
+      window.addEventListener('scroll', function(){
+        console.log("test")
+        let value =window.scrollY;
+        bg.style.top = value *0.5 + 'px';
+        moon.style.left = value *0.5 + 'px';
+        mountain.style.top = value *0.05 + 'px';
+        road.style.top = value *0.25 + 'px';
+        text.style.top = value +'px';
+      })
+    </script>
+      
+  </body>
+</html>
