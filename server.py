@@ -34,6 +34,13 @@ def register():
     session[key] = value
   # use url_for cause it can find the url via its function when route change can still find right url
   return redirect(url_for("home"))
+
+@app.route("/logout")
+def logout():
+  print(session)
+  session.clear()
+  return redirect(url_for("login"))
+
 #----------------test
 @app.route("/test/<name>")
 def test(name):
@@ -43,3 +50,4 @@ def test1():
   return redirect(url_for("test",name="wayne"))
 if __name__ == "__main__":
   app.run(debug=True)
+
