@@ -1,6 +1,14 @@
 <html>
   <head>
     <title>Login And Registration Form</title>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <link rel ='stylesheet' href='/static/style.css'>
   </head>
   <body>
