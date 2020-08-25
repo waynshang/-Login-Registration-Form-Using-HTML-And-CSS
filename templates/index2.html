@@ -4,5 +4,9 @@
 
 
 {% block body %}
-<h1>this is test</h1>
+<form action="#" method=POST>
+  <input type = "user_name" name="user_name" placeholder="Entre User Name" value ="{{user_name if user_name}}"/>
+  <input type = "email" name="email" placeholder="Entre Email" value ="{{email if email}}"/>
+  <input type='submit' value="submit"/>
+</form>
 {% endblock %}
